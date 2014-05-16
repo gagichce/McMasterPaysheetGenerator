@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaySheetGenerator", "PaySheetGenerator\PaySheetGenerator.csproj", "{A274D41F-73B0-4D18-9586-F24C95127885}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaySheetGenerator.Tests", "PaySheetGenerator.Tests\PaySheetGenerator.Tests.csproj", "{C7572729-CBF4-4CDE-8CC6-D60A47B7C608}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PublishScripts", "PublishScripts", "{25396886-059A-497A-91C9-A6889E17D5E9}"
+	ProjectSection(SolutionItems) = preProject
+		PublishScripts\AzureWebsitePublishModule.psm1 = PublishScripts\AzureWebsitePublishModule.psm1
+		PublishScripts\Publish-WebApplicationWebsite.ps1 = PublishScripts\Publish-WebApplicationWebsite.ps1
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configurations", "Configurations", "{FF6F8580-E643-408F-B465-A8993531469D}"
+	ProjectSection(SolutionItems) = preProject
+		PublishScripts\Configurations\PaySheetGenerator-WAWS-dev.json = PublishScripts\Configurations\PaySheetGenerator-WAWS-dev.json
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A274D41F-73B0-4D18-9586-F24C95127885}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A274D41F-73B0-4D18-9586-F24C95127885}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A274D41F-73B0-4D18-9586-F24C95127885}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A274D41F-73B0-4D18-9586-F24C95127885}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7572729-CBF4-4CDE-8CC6-D60A47B7C608}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7572729-CBF4-4CDE-8CC6-D60A47B7C608}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7572729-CBF4-4CDE-8CC6-D60A47B7C608}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7572729-CBF4-4CDE-8CC6-D60A47B7C608}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FF6F8580-E643-408F-B465-A8993531469D} = {25396886-059A-497A-91C9-A6889E17D5E9}
+	EndGlobalSection
+EndGlobal
