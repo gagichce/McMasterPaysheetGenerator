@@ -10,26 +10,31 @@ namespace PaySheetGenerator.Controllers
 {
     public class PayPeriodController : ApiController
     {
-        [HttpGet]
+        [HttpPost]
         public bool StartPayPeriod(int EmployeeID)
         {
             using (var db = new Models.DatabaseContext())
             {
-                var payPeriod = db.PayPeriods.Where(p => p.Employee.ID == EmployeeID && p.TimeEnded == null);
-                if (payPeriod.Count() > 0)
+                var selectedEmployee = db.Employees.First(e => e.ID == EmployeeID);
+                if (selectedEmployee == null)
+                    throw new Models.UserException("Employee was not found", 404, Models.BaseException.Cause.NotFound);
+                db.PayPeriods.Add(new Models.PayPeriod()
                 {
-                    payPeriod.First().TimeEnded = DateTime.UtcNow;
-                }
-                else
-                {
-                    db.PayPeriods.Add(new Models.PayPeriod()
-                    {
-                        Employee = db.Employees.First(e => e.ID == EmployeeID),
-                        TimeStarted = DateTime.UtcNow
-                    });
+                    Employee = selectedEmployee,
+                    TimeStarted = DateTime.UtcNow
+                });
 
-                }
                 db.SaveChanges();
+            }
+            return true;
+        }
+
+        [HttpPost]
+        public bool EndPayPeriod(int EmployeeID, string Desc)
+        {
+            using (var db = new Models.DatabaseContext())
+            {
+
             }
             return true;
         }
