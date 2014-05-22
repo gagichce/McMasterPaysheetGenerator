@@ -174,3 +174,4 @@ UpgradeLog*.htm
 FakesAssemblies/
 /server/PaySheetGenerator/PublishScripts/Configurations
 /server/PaySheetGenerator/PublishScripts
+/server/PaySheetGenerator/Properties/PublishProfiles
